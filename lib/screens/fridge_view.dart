@@ -22,7 +22,7 @@ class _FridgeViewState extends State<FridgeView> {
 
   final List<String> flowerDescriptions = [
     '보랏빛 데이지가 자라고 있어요.\n이 꽃은 조용한 응원을 담고 있어요. 오후 2시,\n가장 따뜻한 시간에 물을 좋아해요.',
-    '연분홍 코스모스가 살랑이며 인사해요.\n가을 바람을 닮은 그리움을 품고 있어요. 해질 무렵, 가장 아름답게 피어난답니다.',
+    '연분홍 코스모스가 살랑이며 인사해요.\n가을 바람을 닮은 그리움을 품고 있어요.\n해질 무렵, 가장 아름답게 피어난답니다.',
   ];
 
   final List<int> flowerWaterNeeds = [5, 4];

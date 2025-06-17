@@ -60,7 +60,7 @@ class _DrinkTrackerScreenState extends State<DrinkTrackerScreen> {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   const SizedBox(width: 60),
-                  Image.asset('assets/images/person.png', height: 280),
+                  Image.asset('assets/images/person0.png', height: 280),
                   const SizedBox(width: 10),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.end,
