@@ -125,7 +125,7 @@ class _DrinkTrackerScreenState extends State<DrinkTrackerScreen> {
                   );
                 },
                 child: const Text(
-                  '내텃밭 보러가기',
+                  '내 꽃밭 보러가기',
                   style: TextStyle(
                     fontSize: 14,
                     decoration: TextDecoration.underline,
