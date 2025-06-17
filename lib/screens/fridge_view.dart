@@ -26,6 +26,7 @@ class _FridgeViewState extends State<FridgeView> {
   ];
 
   final List<int> flowerWaterNeeds = [5, 4];
+  final List<int> needWaterList = [8, 6]; 
 
   void moveFlower(int direction) {
     setState(() {
@@ -50,7 +51,7 @@ class _FridgeViewState extends State<FridgeView> {
         children: [
           const SizedBox(height: 120),
           Text(
-            '다 자라려면 ${needWater}L의 물이 더 필요해요.',
+            '다 자라려면 ${needWaterList[currentIndex]}L의 물이 더 필요해요.',
             style: const TextStyle(fontSize: 16, fontFamily: '이서윤체'),
           ),
           const SizedBox(height: 12),
@@ -59,13 +60,19 @@ class _FridgeViewState extends State<FridgeView> {
             children: List.generate(needWater, (index) {
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 2),
-                child: Image.asset('assets/images/mull.png', width: 24, height: 24),
+                child: Opacity(
+                  opacity: index == 0 ? 1.0 : 0.5,
+                  child: Image.asset(
+                    'assets/images/mull.png',
+                    width: 24,
+                    height: 24,
+                  ),
+                ),
               );
             }),
           ),
           const SizedBox(height: 80),
 
-          // 이미지 + 화살표 한 줄에 배치 (정렬 그대로 유지)
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -76,7 +83,7 @@ class _FridgeViewState extends State<FridgeView> {
                   onPressed: () => moveFlower(-1),
                 )
               else
-                const SizedBox(width: 48), // 오른쪽과 균형 맞춤
+                const SizedBox(width: 48), 
 
               Expanded(
                 child: Center(
@@ -123,7 +130,10 @@ class _FridgeViewState extends State<FridgeView> {
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(6),
-              border: Border.all(color: Colors.grey),
+              border: Border.all(
+                color: Colors.grey,
+                width: 0.3,
+                ),
             ),
             child: Text(
               flowerDescriptions[currentIndex],
