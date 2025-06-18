@@ -94,9 +94,6 @@ class _DrinkTrackerScreenState extends State<DrinkTrackerScreen> {
                       duration: const Duration(milliseconds: 300),
                       child: Container(
                         key: ValueKey(getImageForTotal(model.total)),
-                        decoration: BoxDecoration(
-                          // border: Border.all(color: Colors.grey),
-                        ),
                         child: Image.asset(
                           getImageForTotal(model.total),
                           fit: BoxFit.contain,

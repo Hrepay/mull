@@ -10,12 +10,7 @@ class DrinkModel extends ChangeNotifier {
   void add(int amount) {
     if (_totalDrinkAmount + amount <= goal) {
       _totalDrinkAmount += amount;
-      notifyListeners(); // 추후 Provider 도입 대비
+      notifyListeners(); 
     }
-  }
-
-  void reset() {
-    _totalDrinkAmount = 0;
-    notifyListeners();
   }
 }
