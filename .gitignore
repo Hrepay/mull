@@ -48,5 +48,7 @@ app.*.map.json
 # iOS
 ios/Flutter/Debug.xcconfig
 ios/Flutter/Release.xcconfig
+/Users/hwangs/flutter/mull/ios/Flutter/Debug.xcconfig
+/Users/hwangs/flutter/mull/ios/Flutter/Release.xcconfig
 
 
